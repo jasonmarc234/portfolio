@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jason Marc Justiza Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    
+    <header class="header">
+        <a href="#" class="logo"><span>Jason Marc Justiza</span></a>
+
+        <ul class="nav-links">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+
+        <button class="visit-btn">Visit Github</button>
+    </header>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <img src="img&cv\jason.jpg" alt="">
+
+            <div class="info-box">
+
+                <div class="text">
+                    <h3>Hi, I'm</h3>
+                    <h1>Jason Marc Justiza</h1>
+                    <span class="typing-container">
+                        <span class="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </span>
+                </div>
+
+                <div class="about-description">
+                    <p>BSIT graduate with a solid technical foundation in systems, networking, and software troubleshooting, complemented by working knowledge of HTML, CSS, and JavaScript for web development.</p>
+                    <p>Experienced in extracting, cleaning, and analyzing large operational datasets to support strategic decision-making and campaign optimization. Strong understanding of database querying, performance tuning, and reporting automation.</p>
+                </div>
+
+                <div class="btn-group">
+                    <div class="btn">Download CV</div>
+                    <div class="btn">Contact</div>
+                </div>
+
+                <div class="socials">
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+
+        <h2 class="section-title">Experience</h2>
+
+        <div class="experience-info">
+
+            <div class="grid">
+                <div class="grid-card" data-modal-type="experience" data-modal-title="Data Analyst (MIS/Reporting)" data-modal-duration="1 Year" data-modal-description="• Proven experience as Data Analyst in Debt Collection Agency. • Collected, cleaned, and analyzed 1K+ rows of cardholders and operational data weekly using MS Excel, supporting strategic process improvement across operations. • Mostly used Excel formulas: VLOOKUP, XLOOKUP, MATCH, IF, LEFT/RIGHT, COUNTIF/COUNT, CONCAT, TEXT. • Extracting at least 10 data reports on a daily basis to provide updates from the cardholders every day. • Automated routine reporting tasks using SQL queries and Python scripts, reducing manual effort and increasing report efficiency and accuracy by 80% eliminating manual errors. • Optimized SQL queries for faster extraction. • Stood up as a leader for a handle campaign giving out strategies for more accurate work with the team." data-modal-icon="fa-solid fa-code">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Data Analyst (MIS/Reporting)</span>
+                    <h3>1 Year</h3>
+                    <ul class="experience-list">
+                        <li>• Proven experience as Data Analyst in Debt Collection Agency.</li>
+                        <li>• Collected, cleaned, and analyzed 1K+ rows of cardholders and operational data weekly using MS Excel, supporting strategic process improvement across operations.</li>
+                        <li>• Mostly used Excel formulas: VLOOKUP, XLOOKUP, MATCH, IF, LEFT/RIGHT, COUNTIF/COUNT, CONCAT, TEXT.</li>
+                        <li>• Extracting at least 10 data reports on a daily basis to provide updates from the cardholders every day.</li>
+                        <li>• Automated routine reporting tasks using SQL queries and Python scripts, reducing manual effort and increasing report efficiency and accuracy by 80% eliminating manual errors.</li>
+                        <li>• Optimized SQL queries for faster extraction.</li>
+                        <li>• Stood up as a leader for a handle campaign giving out strategies for more accurate work with the team.</li>
+                    </ul>                    
+                </div>
+
+                <div class="grid-card" data-modal-type="experience" data-modal-title="IT Tech Support Intern" data-modal-duration="6 Months" data-modal-description="•	Provided first-level technical support to students and faculty members. (hardware, software, networking issues) •	Install and configure operating system, and PC maintenance. (assemble and disassemble) •	OS Installation and Configuration. (Windows/Linux) •	Troubleshooting hardware issues" data-modal-icon="fa-solid fa-code">
+                    <i class="fa-solid fa-code"></i>
+                    <span>IT Tech Support Intern</span>
+                    <h3>6 Months</h3>
+                    <ul class="experience-list">
+                        <li>• Provided first-level technical support to students and faculty members. (hardware, software, networking issues) </li>
+                        <li>• Install and configure operating system, and PC maintenance. (assemble and disassemble)</li>
+                        <li>• OS Installation and Configuration. (Windows/Linux)</li>
+                        <li>• Troubleshooting hardware issues.</li>
+                    </ul>                    
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="experience-modal" id="experienceModal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-icon-wrapper">
+                    <div class="modal-icon" id="expModalIcon"></div>
+                </div>
+                <h2 id="expModalTitle"></h2>
+                <h3 id="expModalDuration"></h3>
+                <p id="expModalDescription"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+
+        <h2 class="section-title">Recent Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card" data-modal-type="project" data-modal-title="Excel Data Cleaning & Validation Tool" data-modal-description="An interactive Streamlit application designed to clean and validate ad-hoc Excel datasets with unknown schemas. The tool implements automated schema standardization, duplicate detection, and required-field validation on raw data. Features intelligent missing-value handling that preserves numeric integrity while improving UI clarity, and generates cleaned Excel outputs with embedded validation reports for complete traceability." data-modal-link="https://github.com/jasonmarc234/excel-data-cleaner" data-modal-image="img&cv/project1.png">
+                <img src="img&cv/project1.png" alt="">
+                <h3>Excel Data Cleaning & Validation Tool</h3>
+                <p>An interactive Streamlit application designed to clean and validate ad-hoc Excel datasets with unknown schemas. The tool implements automated schema standardization, duplicate detection, and required-field validation on raw data. Features intelligent missing-value handling that preserves numeric integrity while improving UI clarity, and generates cleaned Excel outputs with embedded validation reports for complete traceability.</p>
+                <div class="btn-group">
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+
+            <div class="project-card" data-modal-type="project" data-modal-title="Simple CRM" data-modal-description="Simple CRM is a browser-based customer relationship management application that operates entirely on the client-side without requiring a backend server or database. The system stores all data locally in the browser's localStorage, making it a self-contained solution for managing client information, tracking interactions, and organizing sales pipelines." data-modal-link="https://github.com/jasonmarc234/simple-crm" data-modal-image="img&cv/project2.png">
+                <img src="img&cv/project2.png" alt="">
+                <h3>Simple CRM</h3>
+                <p><p>Simple CRM is a browser-based customer relationship management application that operates entirely on the client-side without requiring a backend server or database. The system stores all data locally in the browser's localStorage, making it a self-contained solution for managing client information, tracking interactions, and organizing sales pipelines.</p>
+                <div class="btn-group">
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+
+            <div class="project-card" data-modal-type="project" data-modal-title="FLAMES Game" data-modal-description="This game is played to predict the future relationship between a person and their crush (or celebrity crush). If a player does not achieve the desired outcome, they may retry with different variations of their names to influence the outcome. The reactions to the game's outcome may reveal a player's true feelings toward the person they are paired with. The game, however, does not accurately predict the true relationship between any two persons." data-modal-link="https://github.com/jasonmarc234/flames" data-modal-image="img&cv/project3.png">
+                <img src="img&cv/project3.png" alt="">
+                <h3>FLAMES Game</h3>
+                <p><p>This game is played to predict the future relationship between a person and their crush (or celebrity crush). If a player does not achieve the desired outcome, they may retry with different variations of their names to influence the outcome. The reactions to the game's outcome may reveal a player's true feelings toward the person they are paired with. The game, however, does not accurately predict the true relationship between any two persons.</p>
+                <div class="btn-group">
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-modal" id="projectModal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content modal-content-large">
+                <span class="modal-close">&times;</span>
+                <img id="projModalImage" src="" alt="" class="modal-project-image">
+                <h2 id="projModalTitle"></h2>
+                <p id="projModalDescription"></p>
+                <a id="projModalLink" href="" target="_blank" class="modal-link-btn">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-wrapper">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle">Feel free to reach out for collaborations, opportunities, or just to connect!</p>
+            
+            <div class="contact-info-grid">
+                <div class="contact-card" data-contact-type="email" data-contact-value="jasonmarc234@gmail.com" data-contact-icon="fa-solid fa-envelope">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p class="contact-text"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dbb1baa8b4b5b6baa9b8e9e8ef9bbcb6bab2b7f5b8b4b6">[email&#160;protected]</a></p>
+                </div>
+
+                <div class="contact-card" data-contact-type="phone" data-contact-value="+971 545264867" data-contact-icon="fa-solid fa-phone">
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3>Phone Number</h3>
+                    <p class="contact-text">+971 545264867</p>
+                </div>
+                
+                <div class="contact-card" data-contact-type="linkedin" data-contact-value="https://linkedin.com/in/jason-marc-justiza-53094b334/" data-contact-icon="fa-brands fa-linkedin">
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <a href="https://linkedin.com/in/jason-marc-justiza-53094b334/" target="_blank">linkedin.com/in/jason-marc-justiza</a>
+                </div>
+                
+                <div class="contact-card" data-contact-type="github" data-contact-value="https://github.com/jasonmarc234" data-contact-icon="fa-brands fa-github">
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/jasonmarc234" target="_blank">github.com/jasonmarc234</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-modal" id="contactModal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div class="modal-icon-wrapper">
+                    <div class="modal-icon" id="modalIcon"></div>
+                </div>
+                <h2 id="modalTitle"></h2>
+                <p id="modalText"></p>
+                <button class="modal-copy-btn" id="copyBtn">
+                    <i class="fa-solid fa-copy"></i> Copy to Clipboard
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+        <ul>
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+
+            <li>
+                <a href="#projects">Project</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+
+        <p class="copyright">@ All Rights Reserved | Jason Marc Justiza</p>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
