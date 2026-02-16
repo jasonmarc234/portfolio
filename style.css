@@ -1178,3 +1178,31 @@ body.dark-mode #expModalDescription li {
     overflow-wrap: break-word;
     hyphens: none;
 }
+
+/* Modal Buttons Group */
+.modal-buttons-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.modal-demo-btn {
+    background: linear-gradient(to right, rgb(255, 100, 0), rgb(255, 0, 100)) !important;
+}
+
+.modal-demo-btn:hover {
+    background: linear-gradient(to right, rgb(255, 0, 100), rgb(255, 100, 0)) !important;
+    box-shadow: 0 10px 30px rgba(255, 50, 50, 0.3);
+}
+
+@media(max-width: 600px) {
+    .modal-buttons-group {
+        flex-direction: column;
+    }
+    
+    .modal-link-btn {
+        width: 100%;
+    }
+}
