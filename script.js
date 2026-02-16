@@ -574,19 +574,30 @@ projectCardsModal.forEach(card => {
         const title = this.getAttribute('data-modal-title');
         const description = this.getAttribute('data-modal-description');
         const link = this.getAttribute('data-modal-link');
+        const demo = this.getAttribute('data-modal-demo');
         const image = this.getAttribute('data-modal-image');
         
         const modalImage = document.getElementById('projModalImage');
         const modalTitle = document.getElementById('projModalTitle');
         const modalDescription = document.getElementById('projModalDescription');
         const modalLink = document.getElementById('projModalLink');
+        const modalDemo = document.getElementById('projModalDemo');
         
         if (modalImage) modalImage.src = image;
         if (modalTitle) modalTitle.textContent = title;
         if (modalDescription) modalDescription.textContent = description;
         if (modalLink) {
             modalLink.href = link;
-            console.log('Setting link to:', link); // Debug log
+        }
+        
+        // Show/hide Live Demo button based on whether demo link exists
+        if (modalDemo) {
+            if (demo) {
+                modalDemo.href = demo;
+                modalDemo.style.display = 'inline-flex';
+            } else {
+                modalDemo.style.display = 'none';
+            }
         }
         
         projectModal.classList.add('active');
