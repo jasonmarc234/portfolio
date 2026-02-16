@@ -170,7 +170,7 @@ downloadCVButtons.forEach(btn => {
         setTimeout(() => {
             // Create a dummy download link (replace 'your-cv.pdf' with actual file)
             const link = document.createElement('a');
-            link.href = 'img&cv/JasonJustiza_CV.pdf'; // Update this path
+            link.href = 'img&cv/JasonMarc_CV.pdf'; // Update this path
             link.download = 'Jason_Marc_Justiza_CV.pdf';
             document.body.appendChild(link);
             link.click();
@@ -631,3 +631,4 @@ document.addEventListener('keydown', function(e) {
         }
     }
 });
+
